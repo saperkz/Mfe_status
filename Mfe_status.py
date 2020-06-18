@@ -1,8 +1,12 @@
 import subprocess
 import smtplib
 
+#--GET HOSTNAME OF SERVER----------------------------------------------------
 p = subprocess.Popen(["hostname"], stdout=subprocess.PIPE)
 host_output, err = p.communicate()
+
+
+#--CHECK MFE SERVICES: mfeespd and mfetpd------------------------------------
 
 service1 = "mfeespd"
 
@@ -15,7 +19,7 @@ p =  subprocess.Popen(["systemctl", "is-active",  service2], stdout=subprocess.P
 mfetpd_output, err = p.communicate()
 
 
-
+#--CHECK MFE EXCLUSIONS------------------------------------------------------
 p = subprocess.Popen(["/opt/McAfee/ens/tp/bin/mfetpcli", "--getoasconfig", "--exclusionlist", "--profile", "standard"], stdout=subprocess.PIPE)
 excl_output, err = p.communicate()
 
@@ -32,5 +36,5 @@ summary="======================================================================"
 
 smtpObj=smtplib.SMTP('IP_or_dns_name_mail_server', 25)
 smtpObj.ehlo()
-smtpObj.sendmail('o.omarov@kazatomprom.kz', 'o.omarov@kaptechnology.kazatomprom.kz', '\n %s' % summary)
+smtpObj.sendmail('recpnt1@domain.com', 'recpnt2@domain.com', '\n %s' % summary)
 smtpObj.quit()
