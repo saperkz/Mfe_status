@@ -1,9 +1,9 @@
 # ***************************
-# App: ConverP12
-# Description: Converts all certificates in folder with name "AUTH..." and "RSA..." also shows "issued to" and expiration date
-# Date: 03.04.2020
+# App: Mfe_status
+# Description: check status about mcafee mfeespd and mfetpd services, also exclusions for OAS
+# Date: 13.06.2020
 # Author: Olzhas Omarov
-# Python version: 3.8
+# Python version: 2.7
 # Compatibility: Any
 # Email: ooskenesary@gmail.com
 # ***************************
