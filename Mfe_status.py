@@ -1,3 +1,13 @@
+# ***************************
+# App: ConverP12
+# Description: Converts all certificates in folder with name "AUTH..." and "RSA..." also shows "issued to" and expiration date
+# Date: 03.04.2020
+# Author: Olzhas Omarov
+# Python version: 3.8
+# Compatibility: Any
+# Email: ooskenesary@gmail.com
+# ***************************
+
 import subprocess
 import smtplib
 
